@@ -10,6 +10,37 @@ let $map = document.getElementById('map');
 let $distance = document.getElementById('distance');
 let clicks = 0;
 
+
+// Add a listener for the beforeunload event
+window.addEventListener('beforeunload', function(event) {
+  // Prompt the user to confirm before leaving the page
+  event.preventDefault();
+  event.returnValue = '';
+});
+
+// Add a listener for the page load event
+window.addEventListener('load', function() {
+  // Check if the user confirmed before leaving the page
+  const confirmed = sessionStorage.getItem('confirmed');
+  if (confirmed === 'true') {
+    // Continue with the same state
+    console.log('Continue with the same state');
+  } else {
+    // Reset the start and start fresh
+    console.log('Reset the start and start fresh');
+  }
+});
+
+// Add a listener for the reload button click event
+const reloadButton = document.querySelector('button[type="reload"]');
+if (reloadButton) {
+  reloadButton.addEventListener('click', function() {
+    // Prompt the user to confirm before reloading the page
+    sessionStorage.setItem('confirmed', 'true');
+  });
+}
+
+
 $map.addEventListener('click', function (e) {
   console.log('click');
   clicks++;
