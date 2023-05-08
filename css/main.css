@@ -3,7 +3,12 @@
   padding: 0;
 }
 
+.header_org{
+  align-self: auto;
+}
+
 body {
+  cursor: url('../img/dog.png'),auto;
   background: url('../img/background_dog.png') #34495e;
   background-size: cover;
   color: black;

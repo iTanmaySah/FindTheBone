@@ -1,23 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+
+<head>
     <meta charset="utf-8">
-    <title>Treasure Map</title>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <div class="wrap">
+    <title>Find the Bone: Welcome</title>
 
-     <h1>Find the Bone</h1>
+    <link rel="stylesheet"  href="css/index.css">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <h1 class = "header_org"> Welcome to Find The Bone: A Treasure Hunt Game </h1>
+</head>
 
-      <img src="img/grass.jpg" id="map" width="560" height="560">
+<body>
+    <div id="content_container">
+        <div id="form_container">
+            <div id="form_header_container">
+                <h2 id="form_header">Enter Details</h2>
+            </div>
 
-      <p id="distance"></p>
+            <div id="form_content_container">
+                <div id="form_content_inner_container">
 
+                    <div class="login_container">
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+
+
+                    <div>
+                        <button class="fancy_button" onclick="login()">Login</button>
+                        <br>
+                        <a>Already Have an Account?</a>
+                        <a href="signup.html">
+                        <button class="fancy_button" onclick="register()">Register</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
+</body>
 
-    <script src="js/helper_methods.js" charset="utf-8"></script>
-    <script src="js/game_logic.js" charset="utf-8"></script>
 
-  </body>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script type="moodule" src="js/logic.js"></script>
+
+<script src="js/index.js"></script>
+
+
 </html>

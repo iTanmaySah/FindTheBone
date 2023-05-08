@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Instructions</title>
+
+    <link rel="stylesheet"  href="css/instructions.css">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <h1 class = "header_org"> Find The Bone: Instructions </h1>
+</head>
+
+<body>
+    <div id="content_container">
+      <p>Welcome to the instructions page! Follow these steps to complete the task:</p>
+  <ol>
+    <li> The player is a dog who is roaming around the house backyard.</li>
+    <li>In the backyard there is a bone burried underground (The Treasure).</li>
+    <li>You can change your position by a single click on your desired location.</li>
+    <li>Assuming that you are currently at the location where you last clicked, you have to read the corresponding clue and crack where is the bone is buried.</li>
+    <li>Remember: The clues are the thoughts that crosses your mind by the smell at a particular point in the backyard.</li>
+    <li>Try to find the bone in minimum number of clicks to win!</li>
+  </ol>
+</div>
+
+<div>
+    <button class="fancy_button" onclick="next()">Continue</button>
+
+</div>
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script type="moodule" src="js/logic.js"></script>
+
+<script src="js/index.js"></script>
+
+
+</html>
