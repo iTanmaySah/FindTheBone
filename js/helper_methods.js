@@ -22,6 +22,6 @@ let getDistanceHint = distance => {
   } else if (distance < 520) {
     return "Feeling Tired";
   } else {
-    return "I am so full";   //Clues
+    return "Feeling Sleepy";   //Clues
   }
 }
